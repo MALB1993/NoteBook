@@ -1,0 +1,17 @@
+body header {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+body header #search {
+  position: relative;
+}
+body header #search button {
+  position: absolute;
+  right: 13px;
+  top: 3px;
+}
+body i {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=app.css.map */

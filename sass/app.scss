@@ -1,0 +1,23 @@
+body {
+
+    // header
+    header {
+        border: 1px solid transparent;
+        box-sizing: border-box;
+
+        #search {
+            position: relative;
+
+            button {
+                position: absolute;
+                right: 13px;
+                top: 3px;
+            }
+        }
+    }
+
+    i {
+        cursor: pointer;
+    }
+}
+
