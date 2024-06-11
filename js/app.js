@@ -47,6 +47,8 @@ createItemButton.addEventListener('click', (evt) => {
     const ui = new Ui();
     ui.createItem(author, title, body);
     
+    Ui.showMessage("create new item successfully !", 'success');
+    
     // Adding the delete functionality to the new item
     ui.deleteItem();
 
