@@ -1,5 +1,5 @@
 body {
-
+    transition: background-color  0.3s, color  0.3s;
     // header
     header {
         border: 1px solid transparent;
@@ -20,4 +20,3 @@ body {
         cursor: pointer;
     }
 }
-

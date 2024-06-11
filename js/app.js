@@ -16,6 +16,28 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("content").classList.add("d-none");
     }
     ui.deleteItem();
+
+
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.querySelector("body");
+    let theme = localStorage.getItem('theme');
+    localStorage.getItem("theme") === null ?? setItem("theme", theme);
+    body.setAttribute("data-bs-theme", theme);
+
+    themeToggle.addEventListener('click', (evt) => {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        body.setAttribute("data-bs-theme", theme);
+        localStorage.setItem('theme', theme);
+
+        evt.preventDefault();
+    });
+
+
+
 });
 
 // Adding an event listener to the create item button
@@ -46,9 +68,9 @@ createItemButton.addEventListener('click', (evt) => {
     // Creating a Ui object to add the new item to the list
     const ui = new Ui();
     ui.createItem(author, title, body);
-    
+
     Ui.showMessage("create new item successfully !", 'success');
-    
+
     // Adding the delete functionality to the new item
     ui.deleteItem();
 
