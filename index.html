@@ -34,22 +34,46 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-list">
                         <!-- Link to open the modal for creating a new note -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#createItemNoteBook">
+                            <a class="nav-link active" id="create-note" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#createItemNoteBook">
                                 <i class="fa-solid fa-pen"></i>
                                 Create new Note
                             </a>
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-flex">
+
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <ul class="navbar-nav collapse navbar-collapse" id="navbarNavDarkDropdown">
+
+                                    <li class="nav-item dropdown">
+                                        <button class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <i class="fa-solid fa-language"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-dark" id="lang-item">
+                                            <li><a id="ir" class="dropdown-item" href="#">IR</a></li>
+                                            <li><a id="en" class="dropdown-item" href="#">EN</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+
+
+
                                 <!-- Dropdown for theme toggle -->
-                                <a class="nav-link" href="#" role="button" id="theme-toggle">
+                                <button class="nav-link pt-2" href="#" role="button" id="theme-toggle">
                                     <i class="fa-solid fa-sun"></i>
-                                </a>
+                                </button>
+
                             </li>
                         </ul>
                     </div>
@@ -67,10 +91,10 @@
                     <table class="table table-responsive-lg table-borderd text-center border">
                         <thead>
                             <tr>
-                                <th scope="col" class="col-1">Author</th>
-                                <th scope="col" class="col-1">Title</th>
-                                <th scope="col" class="col-10 text-start">Body</th>
-                                <th scope="col" class="col-1">Management</th>
+                                <th scope="col" class="col-1" id="author">Author</th>
+                                <th scope="col" class="col-1" id="title">Title</th>
+                                <th scope="col" class="col-10 text-start" id="body">Body</th>
+                                <th scope="col" class="col-1" id="management">Management</th>
                             </tr>
                         </thead>
                         <tbody id="list">
@@ -84,7 +108,8 @@
     </main>
 
 
-    <div class="modal fade" id="createItemNoteBook" tabindex="-1" aria-labelledby="createItemNoteBookLabel" aria-hidden="true">
+    <div class="modal fade" id="createItemNoteBook" tabindex="-1" aria-labelledby="createItemNoteBookLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -96,22 +121,22 @@
                     <form id="note-book">
                         <div class="row">
                             <div class="my-2 col-lg-6 col-md-6 col-sm-12">
-                                <label for="author">author</label>
-                                <input type="text" name="author" id="author" class="form-control form-control-sm">
+                                <label for="author" id="f-author">author</label>
+                                <input type="text" name="author" id="authorInput" class="form-control form-control-sm">
                             </div>
                             <div class="my-2 col-lg-6 col-md-6 col-sm-12">
-                                <label for="title">Title</label>
-                                <input type="text" name="title" id="title" class="form-control form-control-sm">
+                                <label for="title" id="f-title">Title</label>
+                                <input type="text" name="title" id="titleInput" class="form-control form-control-sm">
                             </div>
                         </div>
                         <div class="my-2">
-                            <label for="body">Body</label>
-                            <textarea name="body" id="body" class="form-control form-control-sm"></textarea>
+                            <label for="body" id="f-body">Body</label>
+                            <textarea name="body" id="bodyInput" class="form-control form-control-sm"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-btn" data-bs-dismiss="modal">Close</button>
                     <button type="submit" id="create-item" class="btn btn-dark">Create Note</button>
                 </div>
             </div>

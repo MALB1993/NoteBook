@@ -1,0 +1,36 @@
+{
+    "fa": {
+        "navbar_title": "دفترچه یادداشت شخصی",
+        "create_new_note": "ایجاد یادداشت جدید",
+        "table": {
+            "author": "نویسنده",
+            "title": "عنوان",
+            "body": "توضیحات",
+            "management": "مدیریت"
+        },
+        "form": {
+            "author" : "نویسنده",
+            "title": "عنوان",
+            "body": "توضیحات",
+            "create_note": "ثبت یادداشت",
+            "cancel": "انصراف"
+        }
+    },
+    "en": {
+        "navbar_title": "Personal NoteBook",
+        "create_new_note": "Create new Note",
+        "table": {
+            "author": "Author",
+            "title": "Title",
+            "body": "Body",
+            "management": "Management"
+        },
+        "form": {
+            "author" : "Author",
+            "title": "Title",
+            "body": "Body",
+            "create_note": "Create Note",
+            "cancel": "Cancel"
+        }
+    }
+}
